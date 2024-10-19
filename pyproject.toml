@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sklearn-flask-app"
+version = "0.1.0"
+description = "A Flask app to deploy a scikit-learn model"
+authors = [
+    { name="Joseph McGuire", email="joseph-c-mcg@gmail.com" }
+]
+dependencies = [
+    "Flask",
+    "joblib",
+    "scikit-learn",
+    "numpy"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
