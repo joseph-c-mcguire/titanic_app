@@ -10,7 +10,7 @@ import yaml
 from flask import Flask
 
 # Load configuration from YAML file
-with open('data/config.yaml', 'r') as file:
+with open('data/config.YAML', 'r') as file:
     config = yaml.safe_load(file)
 
 feature_names = config['features']
@@ -163,4 +163,4 @@ def render_dashboard():
     return dash_app.index()
 
 if __name__ == '__main__':
-    server.run(debug=True, host='0.0.0.0')
+    server.run(debug=True, host='0.0.0.0', port=8050)
