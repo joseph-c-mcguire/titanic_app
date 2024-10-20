@@ -7,13 +7,17 @@ name = "sklearn-flask-app"
 version = "0.1.0"
 description = "A Flask app to deploy a scikit-learn model"
 authors = [
-    { name="Joseph McGuire", email="joseph-c-mcg@gmail.com" }
+    { name = "Joseph McGuire", email = "joseph-c-mcg@gmail.com" }
 ]
+requires-python = ">=3.11"
 dependencies = [
-    "Flask",
-    "joblib",
-    "scikit-learn",
-    "numpy"
+    "Flask==2.0.1",
+    "dash==2.0.0",
+    "joblib==1.0.1",
+    "numpy==1.23.4",  # Use a version with precompiled wheels for Python 3.11
+    "pandas==1.3.3",
+    "plotly==5.3.1",
+    "PyYAML==5.4.1"
 ]
 
 [tool.setuptools.packages.find]
